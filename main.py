@@ -60,32 +60,8 @@ def edge_gen(vertices_number, min_range, max_range, min_edge, max_edge, sign):
     return [dict(zip(vertices_id, vertices_edge)), dict(zip(vertices_id, weight_list)), temp]
 
 
-""" a = []
-N = 10000
-for x in range(N):
-    a.append(random.randint(1, 3))
-
-# Open a file
-fo = open("foo.txt", "w")
-
-n = random.randint(6, 10)
-
-fo.write(str(n) + "\n")
-
-for i in range(n):
-    l = random.randint(0, N - 100)
-    r = random.randint(l + 1, min(l + 100, N))
-    fo.write(str(r - l) + " ")
-    fo.write(" ".join(str(x) for x in a[l:r]))
-    fo.write("\n")
-
-
-# Close opened file
-fo.close()
-
-os.system("./a.out") """
 n = random.randint(2, 15)
-a = edge_gen(n, 0, 1, 0, n - 1, 1)
+a = edge_gen(n, 0, 1, 0, n - 5, 1)
 
 edges = a[0]
 edgeCount = a[2]
